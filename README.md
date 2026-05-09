@@ -2,6 +2,8 @@
 
 Minecraft 服务器宠物/同伴插件，支持多个版本。
 
+**源项目：** https://github.com/Aster0/Companions-Open-Sourced
+
 ## 版本支持
 
 | 模块 | 版本 | 状态 |
