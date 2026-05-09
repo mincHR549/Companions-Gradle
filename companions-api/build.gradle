@@ -11,13 +11,17 @@ repositories {
     maven { url 'https://repo.codemc.io/repository/maven-snapshots/' }
     maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
     maven { url 'https://jitpack.io' }
+    maven { url 'https://libraries.minecraft.net/' }
 }
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
     compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
     compileOnly 'com.zaxxer:HikariCP:4.0.3'
     compileOnly 'org.postgresql:postgresql:42.3.8'
+    compileOnly 'com.mojang:authlib:1.5.21'
+    compileOnly 'com.mojang:brigadier:1.0.18'
 }
 
 jar {

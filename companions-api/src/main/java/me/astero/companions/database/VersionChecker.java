@@ -70,12 +70,12 @@ public class VersionChecker {
 		
 	
 		
-        hikari.setDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlDataSource");
-        hikari.addDataSourceProperty("serverName", host);
-        hikari.addDataSourceProperty("port", port);
-        hikari.addDataSourceProperty("user", username);
-        hikari.addDataSourceProperty("password", password);
-        hikari.addDataSourceProperty("databaseName", databaseName);
+        hikari.setDataSourceClassName("com.mysql.cj.jdbc.MysqlDataSource");
+        hikari.setDataSourceProperty("serverName", host);
+        hikari.setDataSourceProperty("port", port);
+        hikari.setDataSourceProperty("user", username);
+        hikari.setDataSourceProperty("password", password);
+        hikari.setDataSourceProperty("databaseName", databaseName);
 
 		
         
