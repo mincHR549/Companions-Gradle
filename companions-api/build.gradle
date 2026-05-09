@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow'
+}
+
+group = 'me.astero.companions'
+version = '1.9.3'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.codemc.io/repository/maven-snapshots/' }
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'com.zaxxer:HikariCP:4.0.3'
+    compileOnly 'org.postgresql:postgresql:42.3.8'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'me.astero.companions.CompanionsPlugin',
+            'Plugin-Class': 'me.astero.companions.CompanionsPlugin',
+            'api-version': '1.16',
+            'description': 'The ultimate free pet / companion plugin for Minecraft servers!'
+        )
+    }
+}
+
+shadowJar {
+    archiveBaseName = 'Companions-1.9.3'
+    archiveClassifier = ''
+    relocate 'net.md_5.bungee.api', 'shaded.net.md_5.bungee.api'
+    relocate 'org.bstats', 'shaded.org.bstats'
+    minimize()
+}

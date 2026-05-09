@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    group = 'me.astero.companions'
+    version = '1.9.3'
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo.codemc.io/repository/maven-snapshots/' }
+        maven { url 'https://repo.codemc.io/repository/nms/' }
+        maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    java {
+        sourceCompatibility = '17'
+        targetCompatibility = '17'
+    }
+    
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+        options.compilerArgs.add '-Xlint:deprecation'
+    }
+}

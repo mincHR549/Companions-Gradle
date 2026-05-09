@@ -1,0 +1,44 @@
+name: Companions
+version: 1.9.3
+main: me.astero.companions.CompanionsPlugin
+api-version: '1.16'
+author: Astero
+description: The ultimate free pet / companion plugin for Minecraft servers!
+
+commands:
+  companions:
+    description: Main command for Companions
+    usage: /<command> [args]
+  givecompanion:
+    description: Give a companion to a player
+    usage: /<command> <player> <companion>
+  removecompanion:
+    description: Remove a companion from a player
+    usage: /<command> <player>
+  givecompanionitem:
+    description: Give a companion spawn item
+    usage: /<command> <player> <companion>
+  clearcompaniondata:
+    description: Clear all companion data
+    usage: /<command> [player]
+  forceupgrade:
+    description: Force upgrade a companion
+    usage: /<command> <player> <companion>
+  forceactive:
+    description: Force activate a companion
+    usage: /<command> <player> <companion>
+  forcedeactive:
+    description: Force deactivate a companion
+    usage: /<command> <player>
+  tradecompanion:
+    description: Trade a companion to another player
+    usage: /<command> <player>
+  companioncoin:
+    description: CompanionCoin commands
+    usage: /<command> [give|remove|set] [player] [amount]
+
+softdepend:
+  - PlaceholderAPI
+  - Vault
+  - MySQL
+  - SQLite
