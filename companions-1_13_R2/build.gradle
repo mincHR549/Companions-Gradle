@@ -1,0 +1,9 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.astero.companions'
+version = '1.9.3'
+
+// NOTE: No CodeMC NMS jar available for this version.
+// Stub implementation only — replace NMS jars with BuildTools-generated ones for full support.
